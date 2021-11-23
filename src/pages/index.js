@@ -8,10 +8,11 @@ import { Layout } from '../components/Layout'
 import { Seo } from '../components/Seo'
 import { HomepageBanner } from '../components/HomepageBanner'
 import { MainContent } from '../components/MainContent'
+// import { SliceZone } from '../components/SliceZone'
 
 const HomeTemplate = ({ data }) => {
   if (!data) return null
-  debugger
+
   const doc = data.prismicHomepage.data
 
   return (
