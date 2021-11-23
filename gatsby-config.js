@@ -1,8 +1,8 @@
 // gatsby-config.js file
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-console.log('error' + process.env.GATSBY_PRISMIC_REPO_NAME)
 
 module.exports = {
   siteMetadata: {
@@ -14,7 +14,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-        accessToken: process.env.PRISMIC_API_KEY,
+        linkResolver: require('./src/utils/LinkResolver').linkResolver,
         schemas: {
           homepage: require('./custom_types/homepage.json'),
           navigation: require('./custom_types/navigation.json'),

@@ -6,7 +6,7 @@ export const Header = ({ isHomepage }) => {
   return (
     <header className={`site-header ${homepageClass}`}>
       <Link to="/">
-        <div className="logo">Example Site</div>
+        <div className="logo">Portfolio</div>
       </Link>
       <nav>
         <ul>
